@@ -13,7 +13,7 @@
   },
   seed ? 0,
 }:
-runCommand "" { } ''
+runCommand "ai-generated-source-code" { } ''
   echo ${model}
   set -x
   ${llama-cpp}/bin/llama-cli ${lib.escapeShellArgs extraArgs} --seed "${toString seed}" --model ${model} --prompt ${lib.escapeShellArg prompt} | sed 's/ \[end of text\]//g' > $out
