@@ -4,7 +4,7 @@ If you wanted, you can now just ask for C programs like
 
 ```nix
 {
-  hello-pleasedont = pkgs.writeCBin "hello-banana"
+  hello-pleasedont = pkgs.writeCBin "hello-horror"
     (builtins.readFile
       (pkgs.generateText {
         prompt = "// Below is a desparate attempt to convince the user not to do this in C\n";
